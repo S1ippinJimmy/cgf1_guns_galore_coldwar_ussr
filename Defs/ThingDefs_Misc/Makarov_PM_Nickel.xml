@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="CGF1_MWP_Pistol_T1">
+		<defName>CGF1_MWP_Makarov_PM_Nickel_</defName>
+		<label>Makarov PM Nickel</label>
+		<description>Caliber: 9x18mm Makarov. 8-round detachable mag. Semi-Automatic.</description>
+		<graphicData>
+			<texPath>CGF1/Gun/Makarov_PM_Nickel</texPath>
+			<drawSize>0.95</drawSize>
+		</graphicData>
+		<uiIconScale>1.4</uiIconScale>
+		<recipeMaker>
+			<recipeUsers>
+				<li>CGF1_MWP_Building_Gunsmith</li>
+			</recipeUsers>
+			<researchPrerequisite>CGF1_MWP_Research_T8_AtomicAgeFirearms</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>25</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>5000</WorkToMake>
+			<Mass>0.95</Mass>
+			<AccuracyTouch>0.80</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.40</AccuracyMedium>
+			<AccuracyLong>0.30</AccuracyLong>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+		</statBases>
+		<weaponTags>
+			<li>CGF1_Pistol_Civilian</li>
+			<li>CGF1_Pistol_Military</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>RangedLight</li>
+		</weaponClasses>
+		<tradeTags>
+			<li>CGF1_GunsGalore_ColdWarUSSR</li>
+			<li>CGF1_GunsGalore_ColdWarUSSR_Pistol</li>
+		</tradeTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Bullet_9x18mmMakarov_Pistol</defaultProjectile>
+				<warmupTime>0.3</warmupTime>
+				<range>25.9</range>
+				<soundCast>CGF1_MWP_SFX_Pistol4</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+				<def>MF_StandardMuzzleFalshTwo</def>
+				<drawSize>(1.0,1.0)</drawSize>
+				<offsets>
+					<li>(0.2,0.15)</li>
+				</offsets>
+			</li>
+		</modExtensions>
+		<comps>
+			<li Class="WeaponSwitch.CompProperties_SwitchWeapon">
+				<weaponsToSwitch>
+					<li>
+						<label>Attach suppressor</label>
+						<description>Suppressor is not currently attached. Click to install.</description>
+						<texPath>CGF1/UI/Fix_Suppressor</texPath>
+						<weapon>CGF1_MWP_Makarov_PM_Nickel_SD_</weapon>
+						<retainAmmoOnTransfer>true</retainAmmoOnTransfer>
+						<ticksToSwitchWeapon>240</ticksToSwitchWeapon>
+					</li>
+				</weaponsToSwitch>
+			</li>
+		</comps>
+		<generateCommonality>0.10</generateCommonality> <!-- Average -->
+	</ThingDef>
+	
+	<ThingDef ParentName="CGF1_MWP_Pistol_T1">
+		<defName>CGF1_MWP_Makarov_PM_Nickel_SD_</defName>
+		<label>Makarov PM Nickel (SD)</label>
+		<description>Caliber: 9x18mm Makarov. 8-round detachable mag. Semi-Automatic.</description>
+		<graphicData>
+			<texPath>CGF1/Gun/UP/Makarov_PM_Nickel_SD</texPath>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<uiIconScale>1.4</uiIconScale>
+		<recipeMaker Inherit="False"/>
+		<costList>
+			<Steel>25</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>5000</WorkToMake>
+			<Mass>1.15</Mass>
+			<AccuracyTouch>0.80</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.40</AccuracyMedium>
+			<AccuracyLong>0.30</AccuracyLong>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+		</statBases>
+		<weaponTags>
+			<li>CGF1_Pistol_Civilian</li>
+			<li>CGF1_Pistol_Military</li>
+		</weaponTags>
+		<tradeTags Inherit="False">
+			<li>CGF1_GunsGalore_NoSpawn</li>
+		</tradeTags>
+		<equippedStatOffsets>
+			<HuntingStealth>0.5</HuntingStealth>
+		</equippedStatOffsets>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Bullet_9x18mmMakarov_Pistol</defaultProjectile>
+				<warmupTime>0.3</warmupTime>
+				<range>25.9</range>
+				<soundCast>CGF1_MWP_SFX_Pistol_SD2</soundCast>
+				<muzzleFlashScale>1</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<comps>
+			<li Class="WeaponSwitch.CompProperties_SwitchWeapon">
+				<weaponsToSwitch>
+					<li>
+						<label>Remove suppressor</label>
+						<description>Suppressor is attached. Click to uninstall.</description>
+						<texPath>CGF1/UI/Remove_Suppressor</texPath>
+						<weapon>CGF1_MWP_Makarov_PM_Nickel_</weapon>
+						<retainAmmoOnTransfer>true</retainAmmoOnTransfer>
+						<ticksToSwitchWeapon>240</ticksToSwitchWeapon>
+					</li>
+				</weaponsToSwitch>
+			</li>
+		</comps>
+		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
+		<thingSetMakerTags Inherit="False"/>
+	</ThingDef>
+</Defs>

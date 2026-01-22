@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="CGF1_MWP_AssaultRifle_T0">
+		<defName>CGF1_MWP_AKS74N_GP25_1PN34_</defName>
+		<label>AKS-74N GP-25 (1PN34)</label>
+		<description>Caliber: 5.45x39mm. 30-round detachable mag. Select-Fire.
+		
+The AK (Avtomat Kalashnikova) is a Soviet assault rifle designed between 1946-1947 by Mikhail Kalashnikov. Commonly (and somewhat anachronistically) known as the "AK-47," the AK is one of the most recognizable and widely used weapons platforms ever made, with over 100 million Kalashnikov-type guns having been produced since 1948. Reputed for its ease of mass production and reliability, the AK was the backbone of the Soviet Armed Forces and continues to be the standard service platform in most former Warsaw Pact nations.
+
+The AK-74, designed in the 1970s and accepted in 1974, was the successor to the 7.62x39 AK platform in the Soviet Armed Forces. The rifle adopted a new caliber, the 5.45x39mm, which was lighter and had a higher velocity than its predecessor. The AK-74 was also further updated with a new stock, barrel, gas block, and muzzle brake, among other changes. These changes facilitated improvements in accuracy, effective range, and recoil.
+
+The AKS-74N variant has a Warsaw Pact rail on the left side of the receiver, allowing it to mount various optics. Fitted with a GP-25 40mm grenade launcher and a 1PN34 (NSPU) night vision scope.</description>
+		<graphicData>
+			<texPath>CGF1/Gun/AKS74N_GP25_1PN34</texPath>
+			<drawSize>1.01</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<recipeUsers>
+				<li>CGF1_MWP_Building_Gunsmith</li>
+			</recipeUsers>
+			<researchPrerequisite>CGF1_MWP_Research_T9_SpaceAgeFirearms</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>75</Steel>
+			<ComponentIndustrial>11</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>57500</WorkToMake>
+			<Mass>4.20</Mass>
+			<AccuracyTouch>0.60</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.65</AccuracyMedium>
+			<AccuracyLong>0.55</AccuracyLong>
+			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<weaponTags>
+			<li>CGF1_AR_Military</li>
+		</weaponTags>
+		<tradeTags>
+			<li>CGF1_GunsGalore_ColdWarUSSR</li>
+			<li>CGF1_GunsGalore_ColdWarUSSR_AR</li>
+		</tradeTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Bullet_545x39mm_Auto</defaultProjectile>
+				<warmupTime>1.15</warmupTime>
+				<range>33.9</range>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<soundCast>CGF1_MWP_SFX_Rifle_Auto2</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<label>AKS-74N</label>
+				<commandIcon>CGF1/Gun/AKS74N_GP25_1PN34</commandIcon>
+			</li>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Bullet_40mmVOG25_Grenade</defaultProjectile>
+				<warmupTime>3.5</warmupTime>
+				<range>20.9</range>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>2</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<onlyManualCast>true</onlyManualCast>
+				<label>GP-25</label>
+				<commandIcon>CGF1/Underbarrel/GP25</commandIcon>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(0.8,0.8)</drawSize>
+				<offsets>
+					<li>(0.5,0.03)</li>
+				</offsets>
+			</li>
+		</modExtensions>
+		
+		<comps>
+			<li Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<verbProps>
+					<li>
+						<label>AKS-74N</label>
+						<canBeToggled>true</canBeToggled>
+						<separateToggle>false</separateToggle>
+					</li>
+					<li>
+						<label>GP-25</label>
+						<canBeToggled>true</canBeToggled>
+						<separateToggle>false</separateToggle>
+						<description>Caliber: 40mm VOG-25. 1-round tube. Single shot.					
+The GP-25 is a Russian 40mm grenade launcher designed in the 1960s, as part of several independent worldwide efforts to replace the need for rifle grenades. It can be fitted onto almost every major AK variant that exists, as well as a few non-AK rifles (such as the AN-94.) Other derivatives of the GP-25 include the later GP-30 and GP-34.</description>
+					</li>
+				</verbProps>
+			</li>
+			<li Class="WeaponSwitch.CompProperties_SwitchWeapon">
+				<weaponsToSwitch>
+					<li>
+						<label>Attach suppressor</label>
+						<description>Suppressor is not currently attached. Click to install.</description>
+						<texPath>CGF1/UI/Fix_Suppressor</texPath>
+						<weapon>CGF1_MWP_AKS74N_GP25_1PN34_SD_</weapon>
+						<retainAmmoOnTransfer>true</retainAmmoOnTransfer>
+						<ticksToSwitchWeapon>240</ticksToSwitchWeapon>
+					</li>
+				</weaponsToSwitch>
+			</li>
+		</comps>
+		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
+	</ThingDef>
+	
+	<ThingDef ParentName="CGF1_MWP_AssaultRifle_T0">
+		<defName>CGF1_MWP_AKS74N_GP25_1PN34_SD_</defName>
+		<label>AKS-74N GP-25 (1PN34 SD)</label>
+		<description>Caliber: 5.45x39mm. 30-round detachable mag. Select-Fire.
+		
+The AK (Avtomat Kalashnikova) is a Soviet assault rifle designed between 1946-1947 by Mikhail Kalashnikov. Commonly (and somewhat anachronistically) known as the "AK-47," the AK is one of the most recognizable and widely used weapons platforms ever made, with over 100 million Kalashnikov-type guns having been produced since 1948. Reputed for its ease of mass production and reliability, the AK was the backbone of the Soviet Armed Forces and continues to be the standard service platform in most former Warsaw Pact nations.
+
+The AK-74, designed in the 1970s and accepted in 1974, was the successor to the 7.62x39 AK platform in the Soviet Armed Forces. The rifle adopted a new caliber, the 5.45x39mm, which was lighter and had a higher velocity than its predecessor. The AK-74 was also further updated with a new stock, barrel, gas block, and muzzle brake, among other changes. These changes facilitated improvements in accuracy, effective range, and recoil.
+
+The AKS-74N variant has a Warsaw Pact rail on the left side of the receiver, allowing it to mount various optics. Fitted with a GP-25 40mm grenade launcher and a 1PN34 (NSPU) night vision scope.</description>
+		<graphicData>
+			<texPath>CGF1/Gun/UP/AKS74N_GP25_1PN34_SD</texPath>
+			<drawSize>1.26</drawSize>
+		</graphicData>
+		<recipeMaker Inherit="False"/>
+		<costList>
+			<Steel>75</Steel>
+			<ComponentIndustrial>11</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>57500</WorkToMake>
+			<Mass>4.40</Mass>
+			<AccuracyTouch>0.60</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.65</AccuracyMedium>
+			<AccuracyLong>0.55</AccuracyLong>
+			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<weaponTags>
+			<li>CGF1_AR_Military</li>
+		</weaponTags>
+		<tradeTags Inherit="False">
+			<li>CGF1_GunsGalore_NoSpawn</li>
+		</tradeTags>
+		<equippedStatOffsets>
+			<HuntingStealth>0.3</HuntingStealth>
+		</equippedStatOffsets>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Bullet_545x39mm_Auto</defaultProjectile>
+				<warmupTime>1.15</warmupTime>
+				<range>33.9</range>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<soundCast>CGF1_GG_SFXR_Rifle_SD1</soundCast>
+				<muzzleFlashScale>1</muzzleFlashScale>
+				<label>AKS-74N</label>
+				<commandIcon>CGF1/Gun/UP/AKS74N_GP25_1PN34_SD</commandIcon>
+			</li>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Bullet_40mmVOG25_Grenade</defaultProjectile>
+				<warmupTime>3.5</warmupTime>
+				<range>20.9</range>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>2</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<onlyManualCast>true</onlyManualCast>
+				<label>GP-25</label>
+				<commandIcon>CGF1/Underbarrel/GP25</commandIcon>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<comps>
+			<li Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<verbProps>
+					<li>
+						<label>AKS-74N</label>
+						<canBeToggled>true</canBeToggled>
+						<separateToggle>false</separateToggle>
+					</li>
+					<li>
+						<label>GP-25</label>
+						<canBeToggled>true</canBeToggled>
+						<separateToggle>false</separateToggle>
+						<description>Caliber: 40mm VOG-25. 1-round tube. Single shot.					
+The GP-25 is a Russian 40mm grenade launcher designed in the 1960s, as part of several independent worldwide efforts to replace the need for rifle grenades. It can be fitted onto almost every major AK variant that exists, as well as a few non-AK rifles (such as the AN-94.) Other derivatives of the GP-25 include the later GP-30 and GP-34.</description>
+					</li>
+				</verbProps>
+			</li>
+			<li Class="WeaponSwitch.CompProperties_SwitchWeapon">
+				<weaponsToSwitch>
+					<li>
+						<label>Remove suppressor</label>
+						<description>Suppressor is attached. Click to uninstall.</description>
+						<texPath>CGF1/UI/Remove_Suppressor</texPath>
+						<weapon>CGF1_MWP_AKS74N_GP25_1PN34_</weapon>
+						<retainAmmoOnTransfer>true</retainAmmoOnTransfer>
+						<ticksToSwitchWeapon>240</ticksToSwitchWeapon>
+					</li>
+				</weaponsToSwitch>
+			</li>
+		</comps>
+		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
+	</ThingDef>
+	
+</Defs>
